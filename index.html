@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肉类商店</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        .hero {
+            background-image: url('your-image-url-here.jpg'); /* 替换为你的图片URL */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #8b0000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>肉类商店</h1>
+    <p>享受最高品质的肉类</p>
+</header>
+
+<div class="hero">
+    <h2>品质肉类</h2>
+    <p>我们只提供纯净简单的肉类</p>
+</div>
+
+<section>
+    <h2 style="text-align:center;">我们的热销产品</h2>
+    <div class="products">
+        <div class="product">
+            <img src="img/微信截图_20250202151214.png" alt="BBQ Bundle" style="max-width: 100%; height: auto;">
+            <h3>BBQ Bundle</h3>
+            <p>价格: $79.00</p>
+        </div>
+        <div class="product">
+            <img src="bone-in-pork-chop.jpg" alt="Bone-In Pork Chop" style="max-width: 100%; height: auto;">
+            <h3>Bone-In Pork Chop</h3>
+            <p>价格: $5.90</p>
+        </div>
+        <div class="product">
+            <img src="boneless-chicken-thighs.jpg" alt="Boneless Chicken Thighs" style="max-width: 100%; height: auto;">
+            <h3>Boneless Chicken Thighs</h3>
+            <p>价格: $4.90</p>
+        </div>
+        <div class="product">
+            <img src="boneless-ribeye.jpg" alt="Boneless Ribeye" style="max-width: 100%; height: auto;">
+            <h3>Boneless Ribeye</h3>
+            <p>价格: $29.00</p>
+        </div>
+        <div class="product">
+            <img src="chicken-tenders.jpg" alt="Chicken Tenders" style="max-width: 100%; height: auto;">
+            <h3>Chicken Tenders</h3>
+            <p>价格: $4.80</p>
+        </div>
+        <div class="product">
+            <img src="chuck-roast.jpg" alt="Chuck Roast" style="max-width: 100%; height: auto;">
+            <h3>Chuck Roast</h3>
+            <p>价格: $11.40</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2023 肉类商店 - 所有权利保留</p>
+</footer>
+
+</body>
+</html>
