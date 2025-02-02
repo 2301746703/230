@@ -9,43 +9,64 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            color: white;
         }
         .section {
-            padding: 20px;
+            padding: 40px;
+            background-size: cover;
+            background-position: center;
         }
         .nav-intro {
-            background-color: #8B0000; /* 深红色 */
-            color: white;
+            background-image: url('img/background1.jpg'); /* 替换为实际背景图 */
+            text-align: center;
         }
         .category-intro {
-            background-color: #f4f4f4; /* 浅灰色 */
+            display: flex;
+            background-image: url('img/background2.jpg'); /* 替换为实际背景图 */
+            padding: 20px;
         }
-        .product-display {
-            background-color: #ffffff; /* 白色 */
+        .category-intro .text {
+            flex: 1;
+            padding: 20px;
         }
+        .category-intro .images {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .product-display,
         .additional-intro {
-            background-color: #f4f4f4; /* 浅灰色 */
-        }
-        .footer {
-            background-color: #8B0000; /* 深红色 */
-            color: white;
+            background-image: url('img/background3.jpg'); /* 替换为实际背景图 */
             text-align: center;
         }
         .products {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            margin-top: 20px;
         }
         .product {
-            background-color: #f9f9f9;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 15px;
             border-radius: 5px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        img {
-            max-width: 100%;
-            height: auto;
+        .footer {
+            background-image: url('img/background4.jpg'); /* 替换为实际背景图 */
+            text-align: center;
+            padding: 20px;
+        }
+        .extra-intro {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-around;
+            background-image: url('img/background5.jpg'); /* 替换为实际背景图 */
+        }
+        .extra-intro img {
+            width: 30%;
+            margin: 10px;
         }
     </style>
 </head>
@@ -60,69 +81,77 @@
 
 <!-- 第2部分: 产品品类介绍 -->
 <div class="section category-intro">
-    <h2>我们的产品品类</h2>
-    <p>我们提供各种优质肉类，包括牛肉、猪肉和鸡肉等，确保每一口都让您满意。</p>
+    <div class="text">
+        <h2>我们的产品品类</h2>
+        <p>我们提供各种优质肉类，包括牛肉、猪肉和鸡肉等。</p>
+    </div>
+    <div class="images">
+        <img src="img/product1.jpg" alt="产品1" width="80">
+        <img src="img/product2.jpg" alt="产品2" width="80">
+        <img src="img/product3.jpg" alt="产品3" width="80">
+    </div>
 </div>
 
-<!-- 第3部分: 产品展示 -->
+<!-- 第3部分: 产品的展示 -->
 <div class="section product-display">
     <h2>热销产品</h2>
     <div class="products">
         <div class="product">
-            <img src="img/product1.jpg" alt="产品1">
+            <img src="img/product4.jpg" alt="产品4">
             <h3>BBQ Bundle</h3>
             <p>价格: $79.00</p>
         </div>
         <div class="product">
-            <img src="img/product2.jpg" alt="产品2">
+            <img src="img/product5.jpg" alt="产品5">
             <h3>Bone-In Pork Chop</h3>
             <p>价格: $5.90</p>
         </div>
         <div class="product">
-            <img src="img/product3.jpg" alt="产品3">
+            <img src="img/product6.jpg" alt="产品6">
             <h3>Boneless Chicken Thighs</h3>
             <p>价格: $4.90</p>
         </div>
         <div class="product">
-            <img src="img/product4.jpg" alt="产品4">
+            <img src="img/product7.jpg" alt="产品7">
             <h3>Boneless Ribeye</h3>
             <p>价格: $29.00</p>
         </div>
-        <!-- 继续添加产品 -->
+        <!-- 增加其他产品 -->
     </div>
 </div>
 
-<!-- 第4部分: 额外的页面介绍 -->
-<div class="section additional-intro">
-    <h2>更多关于我们的信息</h2>
-    <p>我们致力于提供最高质量的肉类，确保每位客户都满意。</p>
+<!-- 第4部分: 单纯的页面介绍 -->
+<div class="section extra-intro">
+    <img src="img/large.jpg" alt="大图" width="50%">
+    <div class="text">
+        <h2>更多关于我们的信息</h2>
+        <p>我们致力于提供最高质量的肉类，确保每位客户都满意。</p>
+    </div>
 </div>
 
-<!-- 第5部分: 第二个产品展示 -->
-<div class="section product-display">
+<div class="section">
     <h2>更多热销产品</h2>
     <div class="products">
         <div class="product">
-            <img src="img/product5.jpg" alt="产品5">
+            <img src="img/product8.jpg" alt="产品8">
             <h3>Chicken Tenders</h3>
             <p>价格: $4.80</p>
         </div>
         <div class="product">
-            <img src="img/product6.jpg" alt="产品6">
+            <img src="img/product9.jpg" alt="产品9">
             <h3>Chuck Roast</h3>
             <p>价格: $11.40</p>
         </div>
         <div class="product">
-            <img src="img/product7.jpg" alt="产品7">
+            <img src="img/product10.jpg" alt="产品10">
             <h3>New York Strip</h3>
             <p>价格: $18.30</p>
         </div>
         <div class="product">
-            <img src="img/product8.jpg" alt="产品8">
+            <img src="img/product11.jpg" alt="产品11">
             <h3>Pork Chops</h3>
             <p>价格: $7.90</p>
         </div>
-        <!-- 继续添加产品 -->
     </div>
 </div>
 
