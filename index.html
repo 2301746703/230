@@ -10,21 +10,33 @@
             margin: 0;
             display: flex;
             flex-direction: column; /* 垂直布局 */
-            align-items: center; /* 垂直居中 */
+            align-items: center; /* 居中 */
             background-color: #f0f0f0; /* 背景颜色 */
         }
 
         img {
-            width: 100%; /* 图片宽度 */
+            width: 100%; /* 图片宽度100% */
+            height: auto; /* 高度自适应 */
             margin: 10px 0; /* 图片之间的间距 */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%; /* 最大宽度 */
+            padding: 20px; /* 内边距 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            background-color: white; /* 内容背景颜色 */
+            border-radius: 8px; /* 圆角 */
         }
     </style>
 </head>
 
 <body>
 
-    <img src="img/images/a5_01.jpg" alt="第一张图片">
-    <img src="img/images/a5_02.jpg" alt="第二张图片">
+    <div class="container">
+        <img src="img/images/a5_01.jpg" alt="第一张图片">
+        <img src="img/images/a5_02.jpg" alt="第二张图片">
+    </div>
 
 </body>
 
