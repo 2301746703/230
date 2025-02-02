@@ -4,102 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>肉类商店</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
-        header {
-            background-color: #8b0000;
+        .section {
+            padding: 20px;
+        }
+        .nav-intro {
+            background-color: #8B0000; /* 深红色 */
+            color: white;
+        }
+        .category-intro {
+            background-color: #f4f4f4; /* 浅灰色 */
+        }
+        .product-display {
+            background-color: #ffffff; /* 白色 */
+        }
+        .additional-intro {
+            background-color: #f4f4f4; /* 浅灰色 */
+        }
+        .footer {
+            background-color: #8B0000; /* 深红色 */
             color: white;
             text-align: center;
-            padding: 30px 0;
-        }
-        .hero {
-            background-image: url('your-image-url-here.jpg'); /* 替换为你的图片URL */
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
         }
         .products {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
-            padding: 20px;
-            width: 100%; /* 确保宽度为100% */
-            box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
         }
         .product {
-            background-color: white;
+            background-color: #f9f9f9;
             padding: 15px;
-            text-align: center;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 100%; /* 确保每个商品项的宽度为100%，这里指的是grid cell的宽度 */
-        }
-        .footer {
             text-align: center;
-            padding: 15px;
-            background-color: #8b0000;
-            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
 
-<header>
+<!-- 第1部分: 导航和介绍 -->
+<div class="section nav-intro">
     <h1>肉类商店</h1>
-    <p>享受最高品质的肉类</p>
-</header>
-
-<div class="hero">
-    <h2>品质肉类</h2>
-    <p>我们只提供纯净简单的肉类</p>
+    <p>联系电话: 123-456-7890</p>
+    <p>享受最高品质肉类，纯净简单。</p>
 </div>
 
-<section>
-    <h2 style="text-align:center;">我们的热销产品</h2>
+<!-- 第2部分: 产品品类介绍 -->
+<div class="section category-intro">
+    <h2>我们的产品品类</h2>
+    <p>我们提供各种优质肉类，包括牛肉、猪肉和鸡肉等，确保每一口都让您满意。</p>
+</div>
+
+<!-- 第3部分: 产品展示 -->
+<div class="section product-display">
+    <h2>热销产品</h2>
     <div class="products">
         <div class="product">
-            <img src="img/微信截图_20250202151214.png" alt="BBQ Bundle" style="max-width: 100%; height: auto;">
+            <img src="img/product1.jpg" alt="产品1">
             <h3>BBQ Bundle</h3>
             <p>价格: $79.00</p>
         </div>
         <div class="product">
-            <img src="bone-in-pork-chop.jpg" alt="Bone-In Pork Chop" style="max-width: 100%; height: auto;">
+            <img src="img/product2.jpg" alt="产品2">
             <h3>Bone-In Pork Chop</h3>
             <p>价格: $5.90</p>
         </div>
         <div class="product">
-            <img src="boneless-chicken-thighs.jpg" alt="Boneless Chicken Thighs" style="max-width: 100%; height: auto;">
+            <img src="img/product3.jpg" alt="产品3">
             <h3>Boneless Chicken Thighs</h3>
             <p>价格: $4.90</p>
         </div>
         <div class="product">
-            <img src="boneless-ribeye.jpg" alt="Boneless Ribeye" style="max-width: 100%; height: auto;">
+            <img src="img/product4.jpg" alt="产品4">
             <h3>Boneless Ribeye</h3>
             <p>价格: $29.00</p>
         </div>
+        <!-- 继续添加产品 -->
+    </div>
+</div>
+
+<!-- 第4部分: 额外的页面介绍 -->
+<div class="section additional-intro">
+    <h2>更多关于我们的信息</h2>
+    <p>我们致力于提供最高质量的肉类，确保每位客户都满意。</p>
+</div>
+
+<!-- 第5部分: 第二个产品展示 -->
+<div class="section product-display">
+    <h2>更多热销产品</h2>
+    <div class="products">
         <div class="product">
-            <img src="chicken-tenders.jpg" alt="Chicken Tenders" style="max-width: 100%; height: auto;">
+            <img src="img/product5.jpg" alt="产品5">
             <h3>Chicken Tenders</h3>
             <p>价格: $4.80</p>
         </div>
         <div class="product">
-            <img src="chuck-roast.jpg" alt="Chuck Roast" style="max-width: 100%; height: auto;">
+            <img src="img/product6.jpg" alt="产品6">
             <h3>Chuck Roast</h3>
             <p>价格: $11.40</p>
         </div>
+        <div class="product">
+            <img src="img/product7.jpg" alt="产品7">
+            <h3>New York Strip</h3>
+            <p>价格: $18.30</p>
+        </div>
+        <div class="product">
+            <img src="img/product8.jpg" alt="产品8">
+            <h3>Pork Chops</h3>
+            <p>价格: $7.90</p>
+        </div>
+        <!-- 继续添加产品 -->
     </div>
-</section>
+</div>
 
-<footer class="footer">
+<!-- 第6部分: 页尾 -->
+<div class="section footer">
     <p>© 2023 肉类商店 - 所有权利保留</p>
-</footer>
+    <p>联系电话: 123-456-7890</p>
+    <p><a href="https://example.com" style="color: white;">关联网站</a></p>
+</div>
 
 </body>
 </html>
