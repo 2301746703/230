@@ -1,195 +1,316 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>肉类商店</title>
+    <title>美味肉品网站</title>
     <style>
         body {
             margin: 0;
             font-family: "黑体", sans-serif;
+            color: white;
         }
-        .section {
-            width: 1432px;
-            margin: 0 auto;
-            position: relative;
-        }
+
+        /* 部分 1 */
         .section1 {
+            width: 1432px;
             height: 500px;
             background: url('img/a1.jpg') no-repeat center center;
             background-size: cover;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            position: relative;
+            text-align: center;
         }
-        .section1 .contact {
+
+        .phone {
             position: absolute;
             left: 20px;
             top: 20px;
             font-size: 14px; /* 五号 */
+            color: white;
         }
+
+        .section1 h1 {
+            font-size: 36px; /* 初号 */
+        }
+
+        .section1 p {
+            font-size: 10px; /* 五号大写 */
+            letter-spacing: 10px;
+        }
+
+        .view-menu {
+            font-size: 14px; /* 三号 */
+            background-color: red;
+            padding: 5px 15px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        /* 部分 2 */
         .section2 {
+            width: 1432px;
             height: 500px;
             background-color: white;
             display: flex;
         }
-        .text-left {
-            padding: 20px;
+
+        .text {
             flex: 1;
+            padding: 20px;
         }
-        .text-left h1 {
-            font-size: 24px; /* 二号 */
-            color: black;
+
+        .text h2 {
+            font-size: 20px; /* 二号 */
+            margin: 0;
         }
-        .text-left p {
-            font-size: 14px; /* 五号 */
+
+        .text p {
+            font-size: 10px; /* 五号 */
             color: gray;
         }
-        .text-left .highlight {
-            position: relative;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .text-left .highlight::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 5px;
-            background: red;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-        }
-        .images-right {
-            position: relative;
-            flex: 1;
-            padding: 10px;
-        }
-        .images-right img {
-            position: absolute;
-        }
-        .images-right .img1 { width: 100px; height: 100px; top: 40px; left: 0; }
-        .images-right .img2 { width: 80px; height: 80px; top: 0; left: 40px; }
-        .images-right .img3 { width: 60px; height: 60px; top: 100px; left: 80px; }
 
-        .section3 {
-            height: 600px;
-            background: url('img/a2.jpg') no-repeat center center;
-            background-size: cover;
+        .customers {
+            font-size: 20px; /* 二号 */
             color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background-color: red;
+            padding: 5px;
+            display: inline-block;
         }
-        .section3 h1, .section3 p {
+
+        .images {
+            position: relative;
+            width: 400px;
+            padding: 20px;
+        }
+
+        .images img {
+            position: absolute;
+        }
+
+        .img1 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .img2 {
+            width: 260px;
+            height: 260px;
+            top: 20px;
+            left: 20px;
+        }
+
+        .img3 {
+            width: 220px;
+            height: 220px;
+            top: 40px;
+            left: 40px;
+        }
+
+        /* 部分 3 */
+        .section3 {
+            width: 1432px;
+            height: 600px;
+            background: url('background2.jpg') no-repeat center center;
+            background-size: cover;
             text-align: center;
         }
 
+        .section3 h2 {
+            font-size: 20px; /* 二号 */
+        }
+
+        .section3 p {
+            font-size: 10px; /* 五号 */
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product {
+            width: 200px;
+            margin: 10px;
+            position: relative;
+        }
+
+        .product img {
+            width: 100%;
+            display: block;
+        }
+
+        .product div {
+            width: 100%;
+            background-color: white;
+            text-align: center;
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        /* 部分 4 */
         .section4 {
+            width: 1432px;
             height: 600px;
             background-color: white;
             display: flex;
         }
-        .section4 .left {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .section4 .left img {
-            width: 400px;
-            height: 400px;
-        }
-        .section4 .right {
+
+        .left {
             flex: 1;
             padding: 20px;
         }
 
-        .section5 {
-            height: 600px;
-            background: url('img/a3.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .section6 {
-            background: url('img/a4.jpg') no-repeat center center;
-            background-size: cover;
+        .left img {
+            width: 400px;
             height: 400px;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
+        .right {
+            flex: 1;
+            padding: 20px;
+            color: black;
+        }
+
+        .right h2 {
+            font-size: 20px; /* 二号 */
+        }
+
+        .right p {
+            font-size: 10px; /* 五号 */
+            color: gray;
+        }
+
+        /* 小图片 */
+        .small-images {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .small-images img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+
+        /* 部分 5 */
+        .section5 {
+            width: 1432px;
+            height: 600px;
+            background: url('background3.jpg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+        }
+
+        /* 页尾 */
+        .footer {
+            width: 1432px;
+            height: 300px;
+            background: url('footer-background.jpg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 </head>
+
 <body>
 
-    <div class="section section1">
-        <div class="contact">86-13421060224</div>
+    <!-- 部分 1 -->
+    <div class="section1">
+        <div class="phone">phone: 86-13421060224</div>
         <h1>ENJOY THE HIGHEST QUALITY MEAT</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus luctus nec ullamcorper mattis, pulvinar dapibus leo</p>
-        <div>
-            <h2>VIEW OUR MENU</h2>
-            <div style="height: 5px; width: 100%; background: red;"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+        <div class="view-menu">VIEW OUR MENU</div>
+    </div>
+
+    <!-- 部分 2 -->
+    <div class="section2">
+        <div class="text">
+            <h2>WE GO ALL OUT TO RAISE MEAT THAT'S PURE AND SIMPLE</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <div class="customers">Customers 100%</div>
+        </div>
+        <div class="images">
+            <img src="img/a2.jpg" class="img1" alt="图片1">
+            <img src="img/a3.jpg" class="img2" alt="图片2">
+            <img src="img/a4.png" class="img3" alt="图片3">
         </div>
     </div>
 
-    <div class="section section2">
-        <div class="text-left">
-            <h1>WE GO ALL OUT TO RAISE MEAT THAT'S PURE AND SIMPLE</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus. luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-            <div class="highlight">Customers 100%</div>
-        </div>
-        <div class="images-right">
-            <img class="img1" src="图片1的URL" alt="Image 1" />
-            <img class="img2" src="图片2的URL" alt="Image 2" />
-            <img class="img3" src="图片3的URL" alt="Image 3" />
-        </div>
-    </div>
-
-    <div class="section section3">
-        <h1>MORE THAN JUST A BUTCHERSHOP</h1>
+    <!-- 部分 3 -->
+    <div class="section3">
+        <h2>MORE THAN JUST A BUTCHERSHOP</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-        <!-- 产品部分 -->
-        <div>产品展示（请继续添加产品部分代码）</div>
+        <div class="products">
+            <div class="product">
+                <img src="product1.jpg" alt="产品1">
+                <div>产品名称1</div>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="产品2">
+                <div>产品名称2</div>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="产品3">
+                <div>产品名称3</div>
+            </div>
+            <div class="product">
+                <img src="product4.jpg" alt="产品4">
+                <div>产品名称4</div>
+            </div>
+            <!-- 添加更多产品... -->
+        </div>
     </div>
 
-    <div class="section section4">
+    <!-- 部分 4 -->
+    <div class="section4">
         <div class="left">
-            <img src="大图片的URL" alt="Large Image" />
+            <img src="large-image.jpg" alt="大图片">
         </div>
         <div class="right">
-            <h1>MEAT MARKET BEST SERVICES & PRODUCTS</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus. luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-            <div class="highlight">Customers 100%</div>
-            <div>
-                <img src="小图片1的URL" width="80" height="80" />
-                <img src="小图片2的URL" width="80" height="80" />
+            <h2>MEAT MARKET BEST SERVICES & PRODUCTS</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <div class="customers">Customers 100%</div>
+            <div class="small-images">
+                <img src="small-image1.jpg" alt="小图片1">
+                <img src="small-image2.jpg" alt="小图片2">
             </div>
         </div>
     </div>
 
-    <div class="section section5">
-        <h1>MORE THAN JUST A BUTCHERSHOP</h1>
+    <!-- 部分 5 -->
+    <div class="section5">
+        <h2>MORE THAN JUST A BUTCHERSHOP</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-        <!-- 产品部分 -->
-        <div>产品展示（请继续添加产品部分代码）</div>
+        <div class="products">
+            <div class="product">
+                <img src="product5.jpg" alt="产品5">
+                <div>产品名称5</div>
+            </div>
+            <div class="product">
+                <img src="product6.jpg" alt="产品6">
+                <div>产品名称6</div>
+            </div>
+            <div class="product">
+                <img src="product7.jpg" alt="产品7">
+                <div>产品名称7</div>
+            </div>
+            <div class="product">
+                <img src="product8.jpg" alt="产品8">
+                <div>产品名称8</div>
+            </div>
+            <!-- 添加更多产品... -->
+        </div>
     </div>
 
-    <div class="section section6">
-        <h1>联系方式</h1>
-        <p>相关网站信息</p>
+    <!-- 页尾 -->
+    <div class="footer">
+        <p>联系方式 | 关联网站</p>
     </div>
+
 </body>
+
 </html>
