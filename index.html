@@ -30,6 +30,8 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             padding: 20px;
+            width: 100%; /* 确保宽度为100% */
+            box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
         }
         .product {
             background-color: white;
@@ -37,6 +39,7 @@
             text-align: center;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%; /* 确保每个商品项的宽度为100%，这里指的是grid cell的宽度 */
         }
         .footer {
             text-align: center;
